@@ -1,9 +1,13 @@
 import express, { Request, Response } from "express"
 import swaggerUi from "swagger-ui-express"
 import swaggerJsDoc from "swagger-jsdoc"
+import dotenv from "dotenv"
+
+dotenv.config()
 
 const app = express()
-const port = 3000
+
+const apiUrl = process.env.API_URL
 
 const swaggerOptions = {
   swaggerDefinition: {
@@ -15,7 +19,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: `http://localhost:${port}`,
+        url: apiUrl,
       },
     ],
   },
@@ -142,6 +146,6 @@ app.post("/subscribe", (req: Request, res: Response) => {
   res.json({ status: true, message: "User subscribed successfully" })
 })
 
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`)
+app.listen(3000, () => {
+  console.log(`Server is running at ${apiUrl}`)
 })
