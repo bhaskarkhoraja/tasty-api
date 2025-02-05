@@ -2,6 +2,7 @@ import express, { Request, Response } from "express"
 import swaggerUi from "swagger-ui-express"
 import swaggerJsDoc from "swagger-jsdoc"
 import dotenv from "dotenv"
+import cors from "cors"
 
 dotenv.config()
 
@@ -27,6 +28,8 @@ const swaggerOptions = {
 }
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions)
+
+app.use(cors())
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 app.get("/", (req, res) => {
