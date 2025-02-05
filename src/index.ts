@@ -38,32 +38,32 @@ const categories = [
   {
     id: 1,
     name: "Breakfast",
-    img: `/breakfast.png`,
+    img: `${apiUrl}/breakfast.png`,
   },
   {
     id: 2,
     name: "Vegan",
-    img: `/vegan.png`,
+    img: `${apiUrl}/vegan.png`,
   },
   {
     id: 3,
     name: "Meat",
-    img: `/meat.png`,
+    img: `${apiUrl}/meat.png`,
   },
   {
     id: 4,
     name: "Dessert",
-    img: `/dessert.png`,
+    img: `${apiUrl}/dessert.png`,
   },
   {
     id: 5,
     name: "Lunch",
-    img: `/lunch.png`,
+    img: `${apiUrl}/lunch.png`,
   },
   {
     id: 6,
     name: "Chocolate",
-    img: `/chocolate.png`,
+    img: `${apiUrl}/chocolate.png`,
   },
 ]
 
