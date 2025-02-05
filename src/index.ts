@@ -153,6 +153,6 @@ app.post("/subscribe", (req: Request, res: Response) => {
   res.json({ status: true, message: "User subscribed successfully" })
 })
 
-app.listen(3000, () => {
+app.listen(4000, () => {
   console.log(`Server is running at ${apiUrl}`)
 })
